@@ -379,7 +379,7 @@ abstract class PlacesAutocompleteState extends State<PlacesAutocompleteWidget> {
   }
 
   Future<Null> doSearch(String value) async {
-    if (mounted && (value?.isNotEmpty ?? false) && _places != null) {
+    if (mounted && value.isNotEmpty && _places != null) {
       setState(() {
         _searching = true;
       });
